@@ -5,3 +5,28 @@
 
 /* Virtual Lab Pro - scoped visual system */
 .vl-wrap{max-width:1250px}.vl-hero{display:flex;justify-content:space-between;align-items:center;gap:20px;background:radial-gradient(ellipse at 90% 10%,#16668a,#0d2a48 65%);border:1px solid #327a9c;border-radius:24px;padding:28px;margin-bottom:18px}.vl-hero h2{font-size:clamp(24px,3vw,36px);margin:9px 0}.vl-hero p{color:#b2d5e8;margin:0}.vl-eyebrow{color:#78efff;letter-spacing:2px;font-size:11px;font-weight:800}.vl-count{text-align:center;min-width:120px}.vl-count b{font-size:52px;display:block;color:#8cf5ff}.vl-count span{font-size:12px;color:#bbd9e7}.vl-filters{display:flex;gap:12px;margin-bottom:14px}.vl-filters select{max-width:245px}.vl-catalog{display:flex;overflow-x:auto;gap:12px;padding:4px 2px 17px;scroll-snap-type:x mandatory}.vl-item{display:flex;align-items:center;gap:10px;flex:0 0 248px;min-height:96px;text-align:left;border:1px solid #2c5472;border-radius:16px;padding:13px;background:#0d2742;color:#e6f8ff;scroll-snap-align:start}.vl-item.active{border-color:#66e7f7;background:#164766;box-shadow:inset 0 0 0 1px #47c7e8}.vl-icon{font-size:26px}.vl-item small{display:block;color:#7ddfed;font-size:10px;margin-bottom:6px}.vl-item strong{font-size:13px;line-height:1.4;display:block}.vl-arrow{margin-left:auto;color:#78edff}.vl-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:16px}.vl-panel{border:1px solid #2c5575;border-radius:22px;background:linear-gradient(150deg,#102e4b,#0a1e36);padding:22px;min-width:0}.vl-paneltop{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#8db6cb;margin-bottom:16px}.vl-live{color:#78efff;font-weight:800;letter-spacing:1px}.vl-panel h2{font-size:21px}.vl-visual{display:block;width:100%;max-height:355px;border-radius:16px}.vl-animate{animation:vl-pop .45s ease-out}.vl-data{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.vl-data>div{border:1px solid #2c5973;border-radius:13px;background:#0b2841;padding:15px}.vl-data small{display:block;color:#9ac6da}.vl-data strong{font-size:23px;display:block;margin-top:7px;color:#79e8ff}.vl-note{font-size:12px;color:#94afc2;line-height:1.6}.vl-label{display:flex;justify-content:space-between;gap:10px;color:#d9f5ff;font-weight:650;margin:23px 0 12px}.vl-label strong{color:#72edff}.vl-panel input[type=range]{accent-color:#38d6ec;padding:0}.vl-minmax{display:flex;justify-content:space-between;font-size:12px;color:#8db5cb}.vl-actions{display:flex;gap:10px;margin:20px 0}.vl-actions .btn{flex:1}.vl-result{border:1px solid #296581;background:#10354d;border-radius:13px;padding:14px;line-height:1.6;font-size:13px;min-height:90px}.vl-result p{margin:7px 0}.vl-panel h3{margin-top:23px}.vl-history{font-size:12px;color:#b6d7e6;line-height:1.8}.vl-history div{border-bottom:1px solid #234560;padding:6px 0}.vl-history span{color:#7be9fa;margin-right:6px}@keyframes vl-pop{from{opacity:.65;transform:scale(.985)}to{opacity:1;transform:scale(1)}}@media(max-width:990px){.vl-grid{grid-template-columns:1fr}}@media(max-width:520px){.vl-hero{padding:18px}.vl-count{min-width:65px}.vl-count b{font-size:35px}.vl-filters select{min-width:0}.vl-panel{padding:15px}.vl-data strong{font-size:18px}}
+
+/* Virtual Lab Pro responsive repair - isolated to lab and layout containment */
+html,body,#app{max-width:100%;overflow-x:clip}
+.shell{width:100%;min-width:0}
+.sidebar{flex:0 0 258px;min-width:0}
+.main{width:0;min-width:0;max-width:none;flex:1 1 auto}
+.vl-wrap{width:100%;max-width:100%;min-width:0}
+.vl-grid{width:100%;min-width:0;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.vl-grid>*{min-width:0;max-width:100%}
+.vl-panel{overflow-wrap:anywhere}
+.vl-paneltop,.vl-label{min-width:0;flex-wrap:wrap}
+.vl-panel input[type=range],.vl-panel select{display:block;width:100%;max-width:100%;min-width:0}
+.vl-actions{min-width:0;flex-wrap:wrap}
+.vl-actions .btn{min-width:115px}
+.vl-visual{height:auto;max-width:100%}
+.vl-data>div{min-width:0}
+.vl-data strong{overflow-wrap:anywhere}
+@media(max-width:1200px){.vl-grid{grid-template-columns:1fr}.vl-visual{max-height:400px}}
+@media(max-width:760px){.main{width:100%;padding:18px 12px}.sidebar{width:100%;flex-basis:auto}.vl-hero{flex-wrap:wrap}.vl-filters{flex-wrap:wrap}.vl-filters select{flex:1 1 170px;max-width:none}}
+@media(max-width:420px){.vl-panel{padding:12px}.vl-data{grid-template-columns:1fr}.vl-actions .btn{flex:1 1 100%}}
+
+/* Virtual Lab Pro: visible experiment execution */
+.vl-run-status{margin:9px 0 4px;min-height:32px;padding:8px 12px;border-radius:10px;background:#103c55;color:#a9f4ff;font-size:13px;font-weight:700;text-align:center}
+.vl-fx{filter:drop-shadow(0 0 7px #8cefff)}
+.vl-actions button:disabled{opacity:.75;cursor:progress}
