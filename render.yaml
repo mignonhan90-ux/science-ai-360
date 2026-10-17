@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: science-ai-360-preview
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENABLE_DEMO_ACCOUNTS
+        value: "1"
